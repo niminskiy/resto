@@ -1,0 +1,10 @@
+.menu {
+    &__list {
+        min-height: 94vh;
+        padding: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
