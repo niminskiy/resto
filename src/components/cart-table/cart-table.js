@@ -39,7 +39,6 @@ const generateOrder = (items) => {
 			qtty: item.qtty
 		}
 	})
-	console.log(newOrder);
 	return newOrder;
 }
 

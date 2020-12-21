@@ -3,7 +3,6 @@ export default class RestoService {
 
 	async getResource(url) {
 		const res = await fetch(`${this._apiBase}${url}`);
-
 		if (!res.ok) {
 			throw new Error(`Could not fetch ${url}` +
 				`, received ${res.status}`);
@@ -22,6 +21,7 @@ export default class RestoService {
 			console.log(`el.id: ${el.id}, id: ${id}`);
 			return el.id === +id;
 		})
+		console.log(item);
 		return item;
 	}
 
@@ -34,7 +34,7 @@ export default class RestoService {
 		const response = await fetch(`${this._apiBase}/orders`, {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'mailer/json; charset=utf-8'
+				'Content-Type': 'application/json;charset=utf-8'
 			},
 			body: JSON.stringify(newOrder)
 		});
